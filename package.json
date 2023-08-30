@@ -1,0 +1,89 @@
+{
+  "name": "typescript-cli-template",
+  "version": "2.4.0",
+  "description": "Easy CI is a CLI to trigger pipelines for rapid continuous integration",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/cli/main.ts",
+    "lint": "eslint '{bin,commands}/**/*.ts' --fix",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "clean": "rimraf src/**/*.js",
+    "prepare": "husky install",
+    "release": "standard-version"
+  },
+  "bin": {
+    "cli": "src/cli/main.js"
+  },
+  "engines": {
+    "node": ">= 10",
+    "npm": ">= 6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpl0t/typescript-cli-template.git"
+  },
+  "keywords": [
+    "cli",
+    "cicd",
+    "pipeline"
+  ],
+  "author": "Johannes Weih",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xpl0t/typescript-cli-template/issues"
+  },
+  "homepage": "https://github.com/xpl0t/typescript-cli-template#readme",
+  "dependencies": {
+    "@inquirer/prompts": "^2.2.0",
+    "chalk": "^5.2.0",
+    "pino": "^8.15.0",
+    "pino-pretty": "^10.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^18.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.43.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-junit": "^16.0.0",
+    "rimraf": "^5.0.1",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.ts"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "coverageReporters": [
+      "cobertura"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./coverage"
+  }
+}

@@ -1,0 +1,31 @@
+.idea/
+.gitignore
+.prettierrc
+.travis.yml
+Makefile
+node_modules/
+.DS_Store
+.github/
+.husky/
+
+# source
+**/*.ts
+*.ts
+/test
+
+# definitions
+!**/*.d.ts
+!*.d.ts
+
+# configuration
+tsconfig.json
+test/jest-config.json
+azure-pipelines.yml
+.editorconfig
+.eslintignore
+.eslintrc.js
+.vscode/
+commitlint-config.js
+
+coverage/
+CHANGELOG.md

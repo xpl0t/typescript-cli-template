@@ -1,0 +1,14 @@
+.idea/
+.envrc
+node_modules/
+coverage/
+.DS_Store
+*.map
+
+# output
+src/**/*.js
+
+# configuration
+renovate.json
+gulpfile.js
+.vscode/
